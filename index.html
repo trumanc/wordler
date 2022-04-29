@@ -1,9 +1,21 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
 <html>
     <head>
-
+        <script src="js/wordlists.js"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
-        Hello world
+        <p>Choose the word list you want to use:</p>
+        <input type="radio" id="all_words" name="lexicon" value="all"/>
+        <label for="all_words">All 5 letter words (~10k)</label>
+        <br>
+        <input type="radio" id="common_words" name="lexicon" value="common" checked="checked"/>
+        <label for="common_words">Only common/likely words (~2k)</label>
+        <br>
+        <input type="radio" id="test_set" name="lexicon" value="test" />
+        <label for="test_set">Limited testing set</label>
+        <br><br>
+        <button type="button" onclick="buttonPress()"">Run js</button>
+        <table id="words"/>
     </body>
 </html>  
